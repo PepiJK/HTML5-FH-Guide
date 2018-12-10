@@ -1,0 +1,55 @@
+/************************ NAVBAR ************************/
+
+.navbar-default > .navbar-brand,
+.navbar-default > .navbar-brand:hover {
+	color: #0099ff;
+}
+.active {
+	box-shadow: inset 0 -1px 0 #0099ff, inset 0 -2px 0 black;
+}
+
+/************************ HEADER ************************/
+
+h1 {
+	color: #0099ff;
+}
+
+#btngroup > a {
+	width: 100%;
+}
+
+/************************ TEAM ************************/
+
+.teampics > img {
+	max-width: 300px;
+}
+
+/************************ FOOTER ************************/
+
+footer {
+	background-color: #303030;
+}
+
+#footerlink {
+	color: white;
+}
+
+/************************ MEDIA QUERIES ************************/
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+	#headerheading {
+		font-size: 2.5em;
+	}
+}
+
+@media (min-width: 992px) {
+	#headerheading {
+		font-size: 3em;
+	}
+}
+
+@media (max-width: 1200px) {
+}
