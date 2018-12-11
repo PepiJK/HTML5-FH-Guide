@@ -1,5 +1,9 @@
 /************************ NAVBAR ************************/
 
+nav {
+	border-bottom: 1px solid #111;
+}
+
 .navbar-default > .navbar-brand,
 .navbar-default > .navbar-brand:hover {
 	color: #0099ff;
@@ -9,6 +13,10 @@
 }
 
 /************************ HEADER ************************/
+
+header {
+	border-bottom: 1px solid #111;
+}
 
 h1 {
 	color: #0099ff;
@@ -20,8 +28,24 @@ h1 {
 
 /************************ TEAM ************************/
 
-.teampics > img {
-	max-width: 300px;
+main {
+	border-bottom: 1px solid #111;
+}
+
+#team {
+	background-image: url("/res/img/back1.jpg");
+}
+
+h2 {
+	color: #0099ff;
+}
+
+#daniel {
+	background-color: rgba(34, 34, 34, 0.75);
+}
+
+#josef {
+	background-color: rgba(34, 34, 34, 0.75);
 }
 
 /************************ FOOTER ************************/
@@ -30,11 +54,13 @@ footer {
 	background-color: #303030;
 }
 
-#footerlink {
-	color: white;
-}
-
 /************************ MEDIA QUERIES ************************/
+
+@media (max-width: 576px) {
+	.teampics {
+		max-width: 300px;
+	}
+}
 
 @media (min-width: 576px) {
 }
