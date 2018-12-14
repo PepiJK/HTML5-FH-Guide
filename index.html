@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
 	<head>
-		<!-- Required meta tags -->
+		<!--
+			ABGABE 08.01.2019 11:00 EDV_A2.06 Gerd Holweg
+			<!-- Required meta tags
+		-->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -35,9 +38,9 @@
 					<li class="nav-item active mr-3">
 						<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item mr-3"><a class="nav-link" href="#">Info</a></li>
-					<li class="nav-item mr-3"><a class="nav-link" href="#">Live Tour</a></li>
-					<li class="nav-item mr-3"><a class="nav-link" href="#">Raumbelegung</a></li>
+					<li class="nav-item mr-3"><a class="nav-link" href="/sites/info.html">Info</a></li>
+					<li class="nav-item mr-3"><a class="nav-link" href="/sites/tour.html">Live Tour</a></li>
+					<li class="nav-item mr-3"><a class="nav-link" href="/sites/raumbelegung.html">Raumbelegung</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -60,9 +63,11 @@
 							JavaScript Library und AJAX zum Laden von Raumbelegungen von XML/JSON Files.
 						</p>
 						<div id="btngroup" class="d-flex flex-column flex-md-row mb-3">
-							<a href="#" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3">Info</a>
-							<a href="#" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3">Live Tour</a>
-							<a href="#" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3">Raumbelegung</a>
+							<a href="/sites/info.html" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3">Info</a>
+							<a href="/sites/tour.html" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3">Live Tour</a>
+							<a href="/sites/raumbelegung.html" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3"
+								>Raumbelegung</a
+							>
 						</div>
 					</div>
 				</div>
@@ -126,13 +131,15 @@
 			</section>
 		</main>
 
+		<!-- Button to go to top -->
+		<button id="topBtn" class="button button btn-primary" title="Go to top">Top</button>
+
 		<!-- Footer -->
 		<footer>
 			<div class="container-fluid text-center py-3">
-				<h5>
-					&copy; Daniel Krottendorfer | Josef Koch<br />
-					<a target="_blank" href="http://www.technikum-wien.at">FH Technikum</a> 2018
-				</h5>
+				<a class="footerlinks" href="#daniel">Daniel Krottendorfer</a> |
+				<a class="footerlinks" href="#josef">Josef Koch</a><br />
+				<a target="_blank" href="http://www.technikum-wien.at">FH Technikum</a> 2018
 			</div>
 		</footer>
 
@@ -141,5 +148,8 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+		<!-- FH Guide JavaScript -->
+		<script src="/res/js/scroll.js"></script>
 	</body>
 </html>

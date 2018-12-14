@@ -54,11 +54,28 @@ footer {
 	background-color: #303030;
 }
 
+#topBtn {
+	display: none;
+	position: fixed;
+	bottom: 15px;
+	right: 10px;
+	z-index: 99;
+	border: none;
+	outline: none;
+	color: white;
+	cursor: pointer;
+	padding: 10px;
+	border-radius: 4px;
+}
+
 /************************ MEDIA QUERIES ************************/
 
 @media (max-width: 576px) {
 	.teampics {
 		max-width: 300px;
+	}
+	#infoheading {
+		font-size: 2em;
 	}
 }
 
@@ -68,6 +85,9 @@ footer {
 @media (min-width: 768px) {
 	#headerheading {
 		font-size: 2.5em;
+	}
+	#piccarousel > div > div > div > img {
+		height: 600px;
 	}
 }
 
