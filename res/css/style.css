@@ -68,6 +68,12 @@ footer {
 	border-radius: 4px;
 }
 
+/************************ INFO ************************/
+
+.carousel-caption {
+	background-color: rgba(34, 34, 34, 0.75);
+}
+
 /************************ MEDIA QUERIES ************************/
 
 @media (max-width: 576px) {
