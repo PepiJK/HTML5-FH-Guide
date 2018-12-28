@@ -37,11 +37,9 @@
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item mr-3"><a class="nav-link" href="../index.html">Home</a></li>
 					<li class="nav-item mr-3"><a class="nav-link" href="../sites/info.html">Info</a></li>
-					<li class="nav-item active mr-3">
-						<a class="nav-link" href="../sites/tour.html">Live Tour <span class="sr-only">(current)</span></a>
-					</li>
+					<li class="nav-item mr-3"><a class="nav-link" href="../sites/tour.html">Live Tour</a></li>
 
-					<li class="nav-item mr-3 dropdown">
+					<li class="nav-item mr-3 active dropdown">
 						<a
 							class="nav-link dropdown-toggle"
 							href="#"
@@ -51,28 +49,19 @@
 							aria-haspopup="true"
 							aria-expanded="false"
 						>
-							Raumbelegung
+							Raumbelegung <span class="sr-only">(current)</span>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="../sites/raumsuche.html">Raum Suche</a>
-							<a class="dropdown-item" href="../sites/alle-anzeigen.html">Alle Anzeigen</a>
+							<a class="active dropdown-item" href="../sites/alle-anzeigen.html"
+								>Alle Anzeigen <span class="sr-only">(current)</span></a
+							>
 							<a class="dropdown-item" href="../sites/qr-code.html">QR-Code Scan</a>
 						</div>
 					</li>
 				</ul>
 			</div>
 		</nav>
-
-		<!-- Video -->
-		<section class="container text-center p-5">
-			<h1 class="pb-3">Big Buck Bunny</h1>
-			<div class="embed-responsive embed-responsive-16by9">
-				<video class="embed-responsive-item" controls>
-					<source src="../res/mp4/big_buck_bunny.mp4" type="video/mp4" />
-					Your browser does not support the video tag.
-				</video>
-			</div>
-		</section>
 
 		<!-- Button to go to top -->
 		<button id="topBtn" class="button button btn-primary" title="Go to top">Top</button>

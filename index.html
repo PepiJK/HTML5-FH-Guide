@@ -3,7 +3,7 @@
 	<head>
 		<!--
 			ABGABE 08.01.2019 11:00 EDV_A2.06 Gerd Holweg
-			<!-- Required meta tags
+			Required meta tags
 		-->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -20,7 +20,7 @@
 	<body>
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light sticky-top">
-			<a class="navbar-brand mr-5" href="/">HTML5 FH Guide</a>
+			<a class="navbar-brand mr-5" href="./index.html">HTML5 FH Guide</a>
 			<button
 				class="navbar-toggler"
 				type="button"
@@ -36,11 +36,28 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active mr-3">
-						<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item mr-3"><a class="nav-link" href="/sites/info.html">Info</a></li>
-					<li class="nav-item mr-3"><a class="nav-link" href="/sites/tour.html">Live Tour</a></li>
-					<li class="nav-item mr-3"><a class="nav-link" href="/sites/raumbelegung.html">Raumbelegung</a></li>
+					<li class="nav-item mr-3"><a class="nav-link" href="sites/info.html">Info</a></li>
+					<li class="nav-item mr-3"><a class="nav-link" href="sites/tour.html">Live Tour</a></li>
+					<li class="nav-item mr-3 dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="navbarDropdown"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+						>
+							Raumbelegung
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="sites/raumsuche.html">Raum-Suche</a>
+							<a class="dropdown-item" href="sites/alle-anzeigen.html">Alle Anzeigen</a>
+							<a class="dropdown-item" href="sites/qr-code.html">QR-Code Scan</a>
+						</div>
+					</li>
 				</ul>
 			</div>
 		</nav>
@@ -63,11 +80,25 @@
 							JavaScript Library und AJAX zum Laden von Raumbelegungen von XML/JSON Files.
 						</p>
 						<div id="btngroup" class="d-flex flex-column flex-md-row mb-3">
-							<a href="/sites/info.html" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3">Info</a>
-							<a href="/sites/tour.html" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3">Live Tour</a>
-							<a href="/sites/raumbelegung.html" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3"
-								>Raumbelegung</a
-							>
+							<a href="sites/info.html" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3">Info</a>
+							<a href="sites/tour.html" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3">Live Tour</a>
+							<div class="mb-3 mb-md-0 mr-md-3 dropdown">
+								<button
+									class="btn btn-lg btn-outline-primary dropdown-toggle"
+									type="button"
+									id="dropdownMenuButton"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									Raumbelegung
+								</button>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<a class="dropdown-item" href="sites/raumsuche.html">Raum-Suche</a>
+									<a class="dropdown-item" href="sites/alle-anzeigen.html">Alle Anzeigen</a>
+									<a class="dropdown-item" href="sites/qr-code.html">QR-Code Scan</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -150,6 +181,6 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 		<!-- FH Guide JavaScript -->
-		<script src="/res/js/scroll.js"></script>
+		<script src="res/js/scroll.js"></script>
 	</body>
 </html>

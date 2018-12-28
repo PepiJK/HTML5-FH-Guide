@@ -3,16 +3,16 @@
 	<head>
 		<!--
 			ABGABE 08.01.2019 11:00 EDV_A2.06 Gerd Holweg
-			<!-- Required meta tags
+			Required meta tags
 		-->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
 		<!-- Bootstrap CSS Darkly from Bootswatch.com -->
-		<link rel="stylesheet" href="/res/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../res/css/bootstrap.min.css" />
 
 		<!-- Custom Styles -->
-		<link rel="stylesheet" href="/res/css/style.css" />
+		<link rel="stylesheet" href="../res/css/style.css" />
 
 		<title>HTML5 FH Guide</title>
 	</head>
@@ -20,7 +20,7 @@
 	<body>
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light sticky-top">
-			<a class="navbar-brand mr-5" href="/">HTML5 FH Guide</a>
+			<a class="navbar-brand mr-5" href="../index.html">HTML5 FH Guide</a>
 			<button
 				class="navbar-toggler"
 				type="button"
@@ -35,11 +35,29 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item mr-3"><a class="nav-link" href="/">Home</a></li>
-					<li class="nav-item mr-3"><a class="nav-link" href="/sites/info.html">Info</a></li>
-					<li class="nav-item mr-3"><a class="nav-link" href="/sites/tour.html">Live Tour</a></li>
-					<li class="nav-item active mr-3">
-						<a class="nav-link" href="/sites/raumbelegung.html">Raumbelegung<span class="sr-only">(current)</span></a>
+					<li class="nav-item mr-3"><a class="nav-link" href="../index.html">Home</a></li>
+					<li class="nav-item mr-3"><a class="nav-link" href="../sites/info.html">Info</a></li>
+					<li class="nav-item mr-3"><a class="nav-link" href="../sites/tour.html">Live Tour</a></li>
+
+					<li class="nav-item mr-3 active dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="navbarDropdown"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+						>
+							Raumbelegung <span class="sr-only">(current)</span>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="active dropdown-item" href="../sites/raumsuche.html"
+								>Raum Suche <span class="sr-only">(current)</span></a
+							>
+							<a class="dropdown-item" href="../sites/alle-anzeigen.html">Alle Anzeigen</a>
+							<a class="dropdown-item" href="../sites/qr-code.html">QR-Code Scan </a>
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -51,7 +69,8 @@
 		<!-- Footer -->
 		<footer>
 			<div class="container-fluid text-center py-3">
-				&copy; <a class="footerlinks" href="/#daniel">Daniel Krottendorfer</a> | <a href="/#josef">Josef Koch</a><br />
+				&copy; <a href="../index.html#daniel">Daniel Krottendorfer</a> | <a href="../index.html#josef">Josef Koch</a
+				><br />
 				<a target="_blank" href="http://www.technikum-wien.at">FH Technikum</a> 2018
 			</div>
 		</footer>
@@ -63,6 +82,6 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 		<!-- FH Guide JavaScript -->
-		<script src="/res/js/scroll.js"></script>
+		<script src="../res/js/scroll.js"></script>
 	</body>
 </html>
