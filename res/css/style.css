@@ -52,6 +52,11 @@ h2 {
 
 footer {
 	background-color: #303030;
+	/*position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	overflow: hidden;*/
 }
 
 #topBtn {
