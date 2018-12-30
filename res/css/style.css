@@ -89,6 +89,17 @@ iframe {
 #search {
 	max-width: 200px;
 }
+
+/************************ TABLE ************************/
+
+.table {
+	width: 75%;
+}
+
+td {
+	width: 50%;
+}
+
 /************************ MEDIA QUERIES ************************/
 
 @media (max-width: 576px) {
@@ -96,6 +107,9 @@ iframe {
 		max-width: 300px;
 	}
 	.infoheading {
+		font-size: 2em;
+	}
+	#rauminfoheading {
 		font-size: 2em;
 	}
 }
@@ -107,12 +121,14 @@ iframe {
 	#headerheading {
 		font-size: 2.5em;
 	}
+	
 }
 
 @media (min-width: 992px) {
 	#headerheading {
 		font-size: 3em;
 	}
+
 }
 
 @media (max-width: 1200px) {

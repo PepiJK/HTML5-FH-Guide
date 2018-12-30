@@ -3,12 +3,6 @@ $("#formSearch").submit(function (event) {
 	search = search.substring(7); // delete first 7 characters of string (delete "search=")
 	console.log("String Input: " + search);
 
-	// Warum geht des ned ?
-	/*
-	if (search == ("edva206" || "edva207" || "edva508" || "edva608" || "edva609" || "edva610")) {
-		alert("passt");
-	*/
-
 	switch (search) {
 		case "":
 			alert("Suchfeld ist leer!!!");
@@ -36,6 +30,7 @@ $("#formSearch").submit(function (event) {
 	}
 
 	event.preventDefault(); // prevent reloading page after hitting submit
+	$("#queryResult").empty(); // delete previous searches from #queryResult
 });
 
 function loadXml(file) {
@@ -51,18 +46,55 @@ function loadXml(file) {
 		},
 		success: function (data) {
 			console.log("AJAX Success: " + path);
-			//console.log(data);
-			$(data).find("LVDaten").each(function () {
-				if ($(this).find("Datum").text().match("22.11.2017")) {
-					$("#queryResult").append($(this));
-					$("#queryResult").append("<br><br>");
-					//console.log($(this).html());
-					//var datum = $(this);
+
+			var lvdaten = $(data).find("LVDaten");
+
+			var timedate = new Date();
+			var months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]; // needed because getMonth() only returns values 0-11
+			var date = timedate.getDate() + "." + months[timedate.getMonth()] + "." + (timedate.getFullYear() - 1); // -1 because xml files are one year behind (2017 - 2018)
+			var time = timedate.getHours() + ":" + timedate.getMinutes() + ":" + timedate.getSeconds();
+
+			var used = false;
+
+			date = "20.11.2017" // testing
+			console.log(date);
+
+			time = "11:30:10" // testing
+			console.log(time);
+
+			lvdaten.each(function () {
+
+				if ($(this).find("Datum").text().match(date)) {
+
+					var von = $(this).find("Von").text();
+					var bis = $(this).find("Bis").text();
+
+					if ((time > von) && (time < bis)) {
+						console.log("Raum besetzt");
+						$("#queryResult").append('<div class="alert alert-danger text-center font-weight-bold" role="alert">Raum besetzt!</div>'); // Alert
+
+						$("#queryResult").append('<h2 id="rauminfoheading" class="text-center py-3" >Rauminformationen zu ' + file + ' um ' + time + '</h2'); // Heading
+
+						$("#queryResult").append('<table class="table table-striped mx-auto"><tr><td>Datum</td><td>' + $(this).find("Datum").text() // Table
+							+ '</td></tr><tr><td>Von</td><td>' + $(this).find("Von").text()
+							+ '</td></tr><tr><td>Bis</td><td>' + $(this).find("Bis").text()
+							+ '</td></tr><tr><td>Lektoren</td><td>' + $(this).find("Lektoren").text()
+							+ '</td></tr><tr><td>Gruppen</td><td>' + $(this).find("Gruppen").text()
+							+ '</td></tr><tr><td>Lehrfach</td><td>' + $(this).find("Lehrfach").text()
+							+ '</td></tr><tr><td>Anmerkung</td><td>' + $(this).find("Anmerkung").text()
+							+ '</td></tr><tr><td>Stunde von</td><td>' + $(this).find("StundeVon").text()
+							+ '</td></tr><tr><td>Stunde bis</td><td>' + $(this).find("StundeBis").text()
+							+ '</td></tr></table>');
+
+						used = true;
+					}
 				}
 			});
 
-			//var datum = lvdaten.find("Datum").text();
-			//console.log(datum);
+			if (!used) {
+				console.log("Raum frei");
+				$("#queryResult").append('<div class="alert alert-success text-center font-weight-bold" role="alert">Raum frei!</div>');
+			}
 		}
 	});
 }
