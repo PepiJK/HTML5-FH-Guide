@@ -40,7 +40,7 @@ function loadXml(file) {
 
             $(".queryResult").append('<h2 id="rauminfoheading" class="text-center py-3" >Rauminformationen zu ' + file + ' um ' + time + '</h2'); // Heading
 
-            $(".queryResult").append('<table class="table table-striped mx-auto"><tr><td>Datum</td><td>' + $(this).find("Datum").text() // Table
+            $(".queryResult").append('<table class="datatable table table-striped mx-auto"><tr><td>Datum</td><td>' + $(this).find("Datum").text() // Table
               + '</td></tr><tr><td>Von</td><td>' + $(this).find("Von").text()
               + '</td></tr><tr><td>Bis</td><td>' + $(this).find("Bis").text()
               + '</td></tr><tr><td>Lektoren</td><td>' + $(this).find("Lektoren").text()

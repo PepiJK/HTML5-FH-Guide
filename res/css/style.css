@@ -92,11 +92,11 @@ iframe {
 
 /************************ TABLE ************************/
 
-.table {
+.datatable {
 	width: 75%;
 }
 
-td {
+.datatable > td {
 	width: 50%;
 }
 
