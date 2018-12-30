@@ -100,6 +100,15 @@ td {
 	width: 50%;
 }
 
+#liste {
+	width: 75%;
+}
+
+#liste > li > a {
+	cursor: pointer;
+}
+
+
 /************************ MEDIA QUERIES ************************/
 
 @media (max-width: 576px) {
