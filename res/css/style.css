@@ -96,7 +96,7 @@ iframe {
 	width: 75%;
 }
 
-.datatable > td {
+.datatable > tbody > tr > td {
 	width: 50%;
 }
 
