@@ -1,68 +1,52 @@
 <!DOCTYPE html>
 <html lang="de">
-	<head>
-		<!--
-			ABGABE 08.01.2019 11:00 EDV_A2.06 Gerd Holweg
-			Required meta tags
-		-->
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-		<!-- Bootstrap CSS Darkly from Bootswatch.com -->
-		<link rel="stylesheet" href="../res/css/bootstrap.min.css" />
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-		<!-- Custom Styles -->
-		<link rel="stylesheet" href="../res/css/style.css" />
+	<!-- Bootstrap CSS Darkly from Bootswatch.com -->
+	<link rel="stylesheet" href="../res/css/bootstrap.min.css" />
 
-		<title>HTML5 FH Guide</title>
-	</head>
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="../res/css/style.css" />
 
-	<body>
-		<!-- NAVBAR -->
-		<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light sticky-top">
-			<a class="navbar-brand mr-5" href="../index.html">HTML5 FH Guide</a>
-			<button
-				class="navbar-toggler"
-				type="button"
-				data-toggle="collapse"
-				data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
-				<span class="navbar-toggler-icon"></span>
-			</button>
+	<title>HTML5 FH Guide</title>
+</head>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item mr-3"><a class="nav-link" href="../index.html">Home</a></li>
-					<li class="nav-item active mr-3">
-						<a class="nav-link" href="../sites/info.html">Info <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item mr-3"><a class="nav-link" href="../sites/tour.html">Live Tour</a></li>
-					<li class="nav-item mr-3 dropdown">
-						<a
-							class="nav-link dropdown-toggle"
-							href="#"
-							id="navbarDropdown"
-							role="button"
-							data-toggle="dropdown"
-							aria-haspopup="true"
-							aria-expanded="false"
-						>
-							Raumbelegung
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="../sites/raumsuche.html">Raum Suche</a>
-							<a class="dropdown-item" href="../sites/alle-anzeigen.html">Alle Anzeigen</a>
-							<a class="dropdown-item" href="../sites/qr-code.html">QR-Code Scan</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</nav>
+<body>
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light sticky-top">
+		<a class="navbar-brand mr-5" href="../index.html">HTML5 FH Guide</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+		 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-		<!-- Picture Caruosel -->
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item mr-3"><a class="nav-link" href="../index.html">Home</a></li>
+				<li class="nav-item active mr-3">
+					<a class="nav-link" href="../sites/info.html">Info <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item mr-3"><a class="nav-link" href="../sites/tour.html">Live Tour</a></li>
+				<li class="nav-item mr-3 dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+					 aria-haspopup="true" aria-expanded="false">
+						Raumbelegung
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="../sites/raumsuche.html">Raum Suche</a>
+						<a class="dropdown-item" href="../sites/alle-anzeigen.html">Alle Anzeigen</a>
+						<a class="dropdown-item" href="../sites/qr-code.html">QR-Code Scan</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Picture Caruosel -->
+	<main>
 		<section class="container p-5" id="piccarousel">
 			<h1 class="infoheading text-center pb-3">FH-Informationen Allgemein</h1>
 			<div id="carouselExampleIndicators" class="carousel slide mt-3" data-ride="carousel">
@@ -135,37 +119,37 @@
 			</div>
 		</section>
 
-		<div id="googleMap" class="container-fluid text-center">
+		<section id="googleMap" class="container-fluid text-center">
 			<h2 class="infoheading text-center pb-3">Standort</h2>
 			<div>
 				<!-- Source: https://www.maps.ie/create-google-map/ -->
-				<iframe
-					class="embed-responsive-item"
-					src="https://maps.google.com/maps?hl=de&amp;coord=48.2391664,16.3774409&amp;q=+(FH%20Technikum%20Wien)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
-				></iframe>
+				<iframe class="embed-responsive-item" src="https://maps.google.com/maps?hl=de&amp;coord=48.2391664,16.3774409&amp;q=+(FH%20Technikum%20Wien)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"></iframe>
 			</div>
 			<br />
+		</section>
+
+	</main>
+
+
+	<!-- Button to go to top -->
+	<button id="topBtn" class="button button btn-primary" title="Go to top">Top</button>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container-fluid text-center py-3">
+			&copy; <a href="../index.html#daniel">Daniel Krottendorfer</a> | <a href="../index.html#josef">Josef Koch</a><br />
+			<a target="_blank" href="http://www.technikum-wien.at">FH Technikum</a> 2018
 		</div>
+	</footer>
 
-		<!-- Button to go to top -->
-		<button id="topBtn" class="button button btn-primary" title="Go to top">Top</button>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-		<!-- Footer -->
-		<footer>
-			<div class="container-fluid text-center py-3">
-				&copy; <a href="../index.html#daniel">Daniel Krottendorfer</a> | <a href="../index.html#josef">Josef Koch</a
-				><br />
-				<a target="_blank" href="http://www.technikum-wien.at">FH Technikum</a> 2018
-			</div>
-		</footer>
+	<!-- FH Guide JavaScript -->
+	<script src="../res/js/scroll.js"></script>
+</body>
 
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
-		<!-- FH Guide JavaScript -->
-		<script src="../res/js/scroll.js"></script>
-	</body>
 </html>

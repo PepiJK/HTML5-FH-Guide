@@ -1,186 +1,170 @@
 <!DOCTYPE html>
 <html lang="de">
-	<head>
-		<!--
+
+<head>
+	<!--
 			ABGABE 08.01.2019 11:00 EDV_A2.06 Gerd Holweg
-			Required meta tags
 		-->
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="FH Technikum Wien Guide">
+	<meta name="keywords" content="FH Technikum Wien, Guide, HTML5, Josef Koch, Daniel Krottendorfer">
+	<meta name="author" content="Josef Koch, Daniel Krottendorfer">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-		<!-- Bootstrap CSS Darkly from Bootswatch.com -->
-		<link rel="stylesheet" href="res/css/bootstrap.min.css" />
+	<!-- Bootstrap CSS Darkly from Bootswatch.com -->
+	<link rel="stylesheet" href="res/css/bootstrap.min.css" />
 
-		<!-- Custom Styles -->
-		<link rel="stylesheet" href="res/css/style.css" />
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="res/css/style.css" />
 
-		<title>HTML5 FH Guide</title>
-	</head>
+	<title>HTML5 FH Guide</title>
+</head>
 
-	<body>
-		<!-- NAVBAR -->
-		<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light sticky-top">
-			<a class="navbar-brand mr-5" href="./index.html">HTML5 FH Guide</a>
-			<button
-				class="navbar-toggler"
-				type="button"
-				data-toggle="collapse"
-				data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
-				<span class="navbar-toggler-icon"></span>
-			</button>
+<body>
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light sticky-top">
+		<a class="navbar-brand mr-5" href="./index.html">HTML5 FH Guide</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+		 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active mr-3">
-						<a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item mr-3"><a class="nav-link" href="sites/info.html">Info</a></li>
-					<li class="nav-item mr-3"><a class="nav-link" href="sites/tour.html">Live Tour</a></li>
-					<li class="nav-item mr-3 dropdown">
-						<a
-							class="nav-link dropdown-toggle"
-							href="#"
-							id="navbarDropdown"
-							role="button"
-							data-toggle="dropdown"
-							aria-haspopup="true"
-							aria-expanded="false"
-						>
-							Raumbelegung
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="sites/raumsuche.html">Raum-Suche</a>
-							<a class="dropdown-item" href="sites/alle-anzeigen.html">Alle Anzeigen</a>
-							<a class="dropdown-item" href="sites/qr-code.html">QR-Code Scan</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</nav>
-
-		<!-- Welcome Header with Projectinformation -->
-		<header>
-			<div class="container my-md-5 pb-md-5">
-				<div class="row align-items-center">
-					<div class="col-6 mx-auto col-md-6 order-md-2">
-						<img class="img-fluid img-thumbnail my-3 mb-md-0" src="res/img/header.jpg" alt="header" />
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active mr-3">
+					<a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item mr-3"><a class="nav-link" href="sites/info.html">Info</a></li>
+				<li class="nav-item mr-3"><a class="nav-link" href="sites/tour.html">Live Tour</a></li>
+				<li class="nav-item mr-3 dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+					 aria-haspopup="true" aria-expanded="false">
+						Raumbelegung
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="sites/raumsuche.html">Raum-Suche</a>
+						<a class="dropdown-item" href="sites/alle-anzeigen.html">Alle Anzeigen</a>
+						<a class="dropdown-item" href="sites/qr-code.html">QR-Code Scan</a>
 					</div>
-					<div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
-						<h1 id="headerheading" class="mb-3">HTML5 FH Guide</h1>
-						<p class="lead">
-							Als begleitendes Projekt der LV Webtechnologien 1 wird ein HTML5 FH Guide umgesetzt, mit dem Ziel, die
-							Raumbelegung direkt am Standort abrufen zu können
-						</p>
-						<p class="lead mb-4">
-							Die Anwendung ist für Mobile Devices optimiert und verwendet Bootstrap als CSS Framework, jQuery als
-							JavaScript Library und AJAX zum Laden von Raumbelegungen von XML/JSON Files.
-						</p>
-						<div id="btngroup" class="d-flex flex-column flex-md-row mb-3">
-							<a href="sites/info.html" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3">Info</a>
-							<a href="sites/tour.html" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3">Live Tour</a>
-							<div class="mb-3 mb-md-0 mr-md-3 dropdown">
-								<button
-									class="btn btn-lg btn-outline-primary dropdown-toggle"
-									type="button"
-									id="dropdownMenuButton"
-									data-toggle="dropdown"
-									aria-haspopup="true"
-									aria-expanded="false"
-								>
-									Raumbelegung
-								</button>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<a class="dropdown-item" href="sites/raumsuche.html">Raum-Suche</a>
-									<a class="dropdown-item" href="sites/alle-anzeigen.html">Alle Anzeigen</a>
-									<a class="dropdown-item" href="sites/qr-code.html">QR-Code Scan</a>
-								</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Welcome Header with Projectinformation -->
+	<header>
+		<div class="container my-md-5 pb-md-5">
+			<div class="row align-items-center">
+				<div class="col-6 mx-auto col-md-6 order-md-2">
+					<img class="img-fluid img-thumbnail my-3 mb-md-0" src="res/img/header.jpg" alt="header" />
+				</div>
+				<div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
+					<h1 id="headerheading" class="mb-3">HTML5 FH Guide</h1>
+					<p class="lead">
+						Als begleitendes Projekt der LV Webtechnologien 1 wird ein HTML5 FH Guide umgesetzt, mit dem Ziel, die
+						Raumbelegung direkt am Standort abrufen zu können
+					</p>
+					<p class="lead mb-4">
+						Die Anwendung ist für Mobile Devices optimiert und verwendet Bootstrap als CSS Framework, jQuery als
+						JavaScript Library und AJAX zum Laden von Raumbelegungen von XML/JSON Files.
+					</p>
+					<div id="btngroup" class="d-flex flex-column flex-md-row mb-3">
+						<a href="sites/info.html" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3">Info</a>
+						<a href="sites/tour.html" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3">Live Tour</a>
+						<div class="mb-3 mb-md-0 mr-md-3 dropdown">
+							<button class="btn btn-lg btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+							 aria-haspopup="true" aria-expanded="false">
+								Raumbelegung
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="sites/raumsuche.html">Raum-Suche</a>
+								<a class="dropdown-item" href="sites/alle-anzeigen.html">Alle Anzeigen</a>
+								<a class="dropdown-item" href="sites/qr-code.html">QR-Code Scan</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</header>
+		</div>
+	</header>
 
-		<!-- Information about Team -->
-		<main>
-			<section id="team" class="container-fluid pb-5">
-				<div class="container">
-					<h2 class="pb-md-3 pt-3 pt-md-5 text-center">Team</h2>
+	<!-- Information about Team -->
+	<main>
+		<section id="team" class="container-fluid pb-5">
+			<div class="container">
+				<h2 class="pb-md-3 pt-3 pt-md-5 text-center">Team</h2>
 
-					<!-- Daniel Krottendorfer -->
-					<div id="daniel" class="row align-items-center justify-content-sm-center mt-5 py-5 rounded">
-						<div class="col-12 col-sm-3 col-md-4 text-center">
-							<img class="img-fluid rounded-circle mb-2 teampics" src="res/img/daniel.jpg" alt="Daniel Krottendorfer" />
-						</div>
-						<div class="col-12 col-sm-9 col-md-8 col-lg-5 text-center text-sm-left">
-							<h3 class="">Daniel Krottendorfer</h3>
-							<table class="table">
-								<tr>
-									<td>Username</td>
-									<td>if18b030</td>
-								</tr>
-								<tr>
-									<td>E-Mail</td>
-									<td><a href="mailto:if18b030@technikum-wien.at">if18b030@technikum-wien.at</a></td>
-								</tr>
-								<tr>
-									<td>Verband / Gruppe</td>
-									<td>1C</td>
-								</tr>
-							</table>
-						</div>
+				<!-- Daniel Krottendorfer -->
+				<div id="daniel" class="row align-items-center justify-content-sm-center mt-5 py-5 rounded">
+					<div class="col-12 col-sm-3 col-md-4 text-center">
+						<img class="img-fluid rounded-circle mb-2 teampics" src="res/img/daniel.jpg" alt="Daniel Krottendorfer" />
 					</div>
-
-					<!-- Josef Koch -->
-					<div id="josef" class="row align-items-center justify-content-sm-center mt-5 py-5 rounded">
-						<div class="col-12 col-sm-3 col-md-4 text-center order-sm-2">
-							<img class="img-fluid rounded-circle mb-2 teampics" src="res/img/josef.jpg" alt="Josef Koch" />
-						</div>
-						<div class="col-12 col-sm-9 col-md-8 col-lg-5 text-center text-sm-right order-sm-1">
-							<h3 class="">Josef Koch</h3>
-							<table class="table">
-								<tr>
-									<td>Username</td>
-									<td>if18b061</td>
-								</tr>
-								<tr>
-									<td>E-Mail</td>
-									<td><a href="mailto:if18b061@technikum-wien.at">if18b061@technikum-wien.at</a></td>
-								</tr>
-								<tr>
-									<td>Verband / Gruppe</td>
-									<td>1C</td>
-								</tr>
-							</table>
-						</div>
+					<div class="col-12 col-sm-9 col-md-8 col-lg-5 text-center text-sm-left">
+						<h3 class="">Daniel Krottendorfer</h3>
+						<table class="table">
+							<tr>
+								<td>Username</td>
+								<td>if18b030</td>
+							</tr>
+							<tr>
+								<td>E-Mail</td>
+								<td><a href="mailto:if18b030@technikum-wien.at">if18b030@technikum-wien.at</a></td>
+							</tr>
+							<tr>
+								<td>Verband / Gruppe</td>
+								<td>1C</td>
+							</tr>
+						</table>
 					</div>
 				</div>
-			</section>
-		</main>
 
-		<!-- Button to go to top -->
-		<button id="topBtn" class="button button btn-primary" title="Go to top">Top</button>
-
-		<!-- Footer -->
-		<footer>
-			<div class="container-fluid text-center py-3">
-				<a class="footerlinks" href="#daniel">Daniel Krottendorfer</a> |
-				<a class="footerlinks" href="#josef">Josef Koch</a><br />
-				<a target="_blank" href="http://www.technikum-wien.at">FH Technikum</a> 2018
+				<!-- Josef Koch -->
+				<div id="josef" class="row align-items-center justify-content-sm-center mt-5 py-5 rounded">
+					<div class="col-12 col-sm-3 col-md-4 text-center order-sm-2">
+						<img class="img-fluid rounded-circle mb-2 teampics" src="res/img/josef.jpg" alt="Josef Koch" />
+					</div>
+					<div class="col-12 col-sm-9 col-md-8 col-lg-5 text-center text-sm-right order-sm-1">
+						<h3 class="">Josef Koch</h3>
+						<table class="table">
+							<tr>
+								<td>Username</td>
+								<td>if18b061</td>
+							</tr>
+							<tr>
+								<td>E-Mail</td>
+								<td><a href="mailto:if18b061@technikum-wien.at">if18b061@technikum-wien.at</a></td>
+							</tr>
+							<tr>
+								<td>Verband / Gruppe</td>
+								<td>1C</td>
+							</tr>
+						</table>
+					</div>
+				</div>
 			</div>
-		</footer>
+		</section>
+	</main>
 
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<!-- Button to go to top -->
+	<button id="topBtn" class="button button btn-primary" title="Go to top">Top</button>
 
-		<!-- FH Guide JavaScript -->
-		<script src="res/js/scroll.js"></script>
-	</body>
+	<!-- Footer -->
+	<footer>
+		<div class="container-fluid text-center py-3">
+			<a class="footerlinks" href="#daniel">Daniel Krottendorfer</a> |
+			<a class="footerlinks" href="#josef">Josef Koch</a><br />
+			<a target="_blank" href="http://www.technikum-wien.at">FH Technikum</a> 2018
+		</div>
+	</footer>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+	<!-- FH Guide JavaScript -->
+	<script src="res/js/scroll.js"></script>
+</body>
+
 </html>
