@@ -1,5 +1,5 @@
 function loadXml(file) {
-	var path = "/res/xml_json/" + file + ".xml";
+	var path = "../res/xml_json/" + file + ".xml";
 
 	$.ajax({
 		type: "GET",

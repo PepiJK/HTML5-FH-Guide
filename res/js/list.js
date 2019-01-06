@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   $.ajax({
     type: "GET",
-    url: "/res/xml_json/rooms.json",
+    url: "../res/xml_json/rooms.json",
     dataType: "json",
     success: function (data) {
       console.log("rooms.json has been successfully loaded");
