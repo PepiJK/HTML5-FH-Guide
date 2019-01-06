@@ -1,79 +1,64 @@
+function loadXml(file) {
+	var path = "/res/xml_json/" + file + ".xml";
 
-		//JSON-Datei laden, wenn zweiter Link geklickt wird
-		$(document).ready(function () {
-			loadRooms();
-		});
-		
-		function loadRooms()
-		{
-			console.log("Load was performed.");
-			$.getJSON("xml_json/rooms.json", function (data) {
-				var heading;
+	$.ajax({
+		type: "GET",
+		url: path,
+		datatype: "xml",
+		error: function (jqXHR, textStatus, errorThrown) {
+			console.log("AJAX Error: " + errorThrown);
+		},
+		success: function (data) {
+			console.log("AJAX Success: " + path);
 
-				var items = [];
-				//alle JSON-Daten als Key-Value auaslesen und als li-Elemente in Array speichern
-				$.each(data, function (key, val) {
-					heading = key;
-					$.each(val, function (key, val) {
-						items.push("<tr><td onclick=showData(this) onmouseover=style.color='grey' onmouseout=style.color='white' id='" + val + "'>" + val + "</td></tr>");
-						//items.push("</tr>");
-					});
-				});
+			var lvdaten = $(data).find("LVDaten");
 
-				//ul-Element erzeugen, als html werden alle li-Elemente hinzugefügt
+			var timedate = new Date();
+			var months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]; // needed because getMonth() only returns values 0-11
+			var date = timedate.getDate() + "." + months[timedate.getMonth()] + "." + (timedate.getFullYear() - 1); // -1 because xml files are one year behind (2017 - 2018)
+			var time = timedate.getHours() + ":" + timedate.getMinutes() + ":" + timedate.getSeconds();
 
-				$("<h2/>", {
-					class: "my-new-heading",
-					html: heading
-				}).appendTo("#divOne");
+			var used = false;
 
-				$("<table/>", {
-					class: "my-new-selection",
-					html: items
-				}).appendTo("#divOne");
+			date = "20.11.2017" // testing
+			console.log(date);
+
+			time = "11:30:10" // testing
+			console.log(time);
+
+			lvdaten.each(function () {
+
+				if ($(this).find("Datum").text().match(date)) {
+
+					var von = $(this).find("Von").text();
+					var bis = $(this).find("Bis").text();
+
+					if ((time > von) && (time < bis)) { // display the used room info when the current time is in between a LV
+						console.log("Raum besetzt");
+						$(".queryResult").append('<div class="alert alert-danger text-center font-weight-bold" role="alert">Raum ' + file + ' besetzt!</div>'); // Alert
+
+						$(".queryResult").append('<h2 id="rauminfoheading" class="text-center py-3" >Rauminformationen zu ' + file + ' um ' + time + '</h2'); // Heading
+
+						$(".queryResult").append('<table class="datatable table table-striped mx-auto"><tr><td>Datum</td><td>' + $(this).find("Datum").text() // Table
+							+ '</td></tr><tr><td>Von</td><td>' + $(this).find("Von").text()
+							+ '</td></tr><tr><td>Bis</td><td>' + $(this).find("Bis").text()
+							+ '</td></tr><tr><td>Lektoren</td><td>' + $(this).find("Lektoren").text()
+							+ '</td></tr><tr><td>Gruppen</td><td>' + $(this).find("Gruppen").text()
+							+ '</td></tr><tr><td>Lehrfach</td><td>' + $(this).find("Lehrfach").text()
+							+ '</td></tr><tr><td>Anmerkung</td><td>' + $(this).find("Anmerkung").text()
+							+ '</td></tr><tr><td>Stunde von</td><td>' + $(this).find("StundeVon").text()
+							+ '</td></tr><tr><td>Stunde bis</td><td>' + $(this).find("StundeBis").text()
+							+ '</td></tr></table>');
+
+						used = true;
+					}
+				}
 			});
 
-		}
-
-
-		function showData(e)
-		{
-			document.getElementById("divTwo").innerHTML = "";
-			var request = new XMLHttpRequest();
-			var f = "xml_json/edva" + e.id[5] + e.id[7] + e.id[8] + ".xml"
-			request.open("GET",f, false);
-			request.send();
-			var xml = request.responseXML;
-			var daten = xml.getElementsByTagName("LVDaten");
-			var items = [];
-			items.push("<tr> <th>Datum</th> <th>Von</th> <th>Bis</th> <th>Lektoren</th> <th>Gruppen</th> <th>Lehrfach</th> <th>Anmerkung</th> <th>Stunde von</th> <th>Stunde bis</th> </tr>")
-			for (var i = 0; i < daten.length; i++) {
-				var datum = daten[i].getElementsByTagName("Datum")[0].childNodes[0].nodeValue;
-				var von = daten[i].getElementsByTagName("Von")[0].childNodes[0].nodeValue.slice(0,5);
-				var bis = daten[i].getElementsByTagName("Bis")[0].childNodes[0].nodeValue.slice(0,5);
-				var lektoren = daten[i].getElementsByTagName("Lektoren")[0].childNodes[0].nodeValue;
-				var gruppen = daten[i].getElementsByTagName("Gruppen")[0].childNodes[0].nodeValue;
-				var lehrfach = daten[i].getElementsByTagName("Lehrfach")[0].childNodes[0].nodeValue;
-
-				var anmerkung;
-				if(daten[i].getElementsByTagName("Anmerkung")[0].childNodes.length>0)
-					anmerkung=daten[i].getElementsByTagName("Anmerkung")[0].childNodes[0].nodeValue;
-				else
-					anmerkung="";
-
-				var stundeVon = daten[i].getElementsByTagName("StundeVon")[0].childNodes[0].nodeValue;
-				var stundeBis = daten[i].getElementsByTagName("StundeBis")[0].childNodes[0].nodeValue;
-				items.push("<tr> <td>" + datum + "</td> <td>" + von + "</td> <td>" + bis + "</td><td>" + lektoren + "</td> <td>" + gruppen + "</td> <td>" + lehrfach + "</td> <td>" + anmerkung + "</td> <td>" + stundeVon + "</td> <td>" + stundeBis + "</td> </tr>")
+			if (!used) {
+				console.log("Raum frei");
+				$(".queryResult").append('<div class="alert alert-success text-center font-weight-bold" role="alert">Raum ' + file + ' frei!</div>');
 			}
-			
-			$("<table/>", {
-				class: "table table-dark",
-				html: items
-			}).appendTo("#divTwo");
-
 		}
-
-		function loadTimeTable()
-		{
-
-		}
+	});
+}

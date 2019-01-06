@@ -6,7 +6,6 @@ $(document).ready(function () {
     type: "GET",
     url: "/res/xml_json/rooms.json",
     dataType: "json",
-    type: "get",
     success: function (data) {
       console.log("rooms.json has been successfully loaded");
 
@@ -46,8 +45,6 @@ $(document).ready(function () {
 
         //console.log(subitems[i]);
       });
-
-
     }
   });
 });
